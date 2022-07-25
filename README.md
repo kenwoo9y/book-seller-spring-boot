@@ -17,6 +17,16 @@ Content-Length: 73
 }
 ```
 #### Sign-In
+```
+POST /api/authentication/sign-in HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "username": "username",
+    "password": "password"
+}
+```
 
 ### User
 
