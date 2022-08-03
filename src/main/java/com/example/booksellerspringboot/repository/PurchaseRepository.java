@@ -10,7 +10,7 @@ import com.example.booksellerspringboot.entity.Purchase;
 @Repository
 @Mapper
 public interface PurchaseRepository {
-    public Purchase savePurchase();
+    public void savePurchase(Purchase purchase);
 
     List<Purchase> getAllPurchasesItemsOfUser(String userId);
 }

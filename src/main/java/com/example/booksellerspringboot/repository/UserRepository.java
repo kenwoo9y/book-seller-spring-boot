@@ -10,7 +10,7 @@ import com.example.booksellerspringboot.entity.User;
 @Repository
 @Mapper
 public interface UserRepository {
-    public User saveUser();
+    public void saveUser(User user);
 
     public Optional<User> getUserByUserName(String userName);
 }

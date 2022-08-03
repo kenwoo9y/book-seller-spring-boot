@@ -10,7 +10,7 @@ import com.example.booksellerspringboot.entity.Book;
 @Repository
 @Mapper
 public interface BookRepository {
-    public Book saveBook();
+    public void saveBook(Book book);
 
     public List<Book> getAllBooks();
 
