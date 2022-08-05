@@ -25,6 +25,7 @@ public class UserServiceImpl implements UserService {
         user.setRole(Role.USER);
         user.setCreatedTime(LocalDateTime.now());
         user.setUpdatedTime(LocalDateTime.now());
+        this.userRepository.saveUser(user);
     }
 
     @Override
