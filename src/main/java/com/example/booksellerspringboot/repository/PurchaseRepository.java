@@ -12,5 +12,5 @@ import com.example.booksellerspringboot.entity.Purchase;
 public interface PurchaseRepository {
     public void savePurchase(Purchase purchase);
 
-    List<Purchase> getAllPurchasesItemsOfUser(String userId);
+    public List<Purchase> getAllPurchasesItemsOfUser(String userId);
 }
