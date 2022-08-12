@@ -3,25 +3,21 @@
 
 <mapper namespace="com.example.mybatissample.repository.UserRepository">
     <insert id="saveUser" parameterType="com.example.booksellerapp.entity.User">
-        <![CDATA[
-            insert into book_seller_sc.user values(
-                #{id},
-                #{userName},
-                #{password},
-                #{email},
-                #{firstName},
-                #{lastName},
-                #{createdTime},
-                #{updatedTime},
-                #{role}
-            )
-        ]]>
+        insert into book_seller_sc.user values(
+            #{id},
+            #{userName},
+            #{password},
+            #{email},
+            #{firstName},
+            #{lastName},
+            #{createdTime},
+            #{updatedTime},
+            #{role}
+        )
     </insert>
 
     <select id="getUserByUserName" parameterType="string" resultMap="userDetails">
-        <![CDATA[
-            select * from book_seller_sc.user where user_name = #{userName}
-        ]]>
+        select * from book_seller_sc.user where user_name = #{userName}
     </select>
 
     <resultMap id="userDetails" type="com.example.booksellerapp.entity.User">

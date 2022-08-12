@@ -3,22 +3,18 @@
 
 <mapper namespace="com.example.mybatissample.repository.BookRepository">
     <insert id="saveBook" parameterType="com.example.booksellerapp.entity.Book">
-        <![CDATA[
-            insert into book_seller_sc.book values(
-                #{id},
-                #{name},
-                #{description},
-                #{price},
-                #{createdTime},
-                #{updatedTime}
-            )
-        ]]>
+        insert into book_seller_sc.book values(
+            #{id},
+            #{name},
+            #{description},
+            #{price},
+            #{createdTime},
+            #{updatedTime}
+        )
     </insert>
 
-    <select id="getAllBooks" parameterType="string" resultMap="bookDetails">
-        <![CDATA[
-            select * from book_seller_sc.book
-        ]]>
+    <select id="getAllBooks" resultMap="bookDetails">
+        select * from book_seller_sc.book
     </select>
 
     <resultMap id="bookDetails" type="com.example.booksellerapp.entity.Book">
@@ -31,8 +27,6 @@
     </resultMap>
 
     <delete id="deleteBookById" parameterType="string">
-        <![CDATA[
-            delete from book_seller_sc.book where id = #{id}
-        ]]>
+        delete from book_seller_sc.book where id = #{id}
     </delete>
 </mapper>
