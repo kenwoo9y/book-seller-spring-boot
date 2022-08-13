@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.booksellerspringboot.entity.Role;
 import com.example.booksellerspringboot.entity.User;
@@ -31,5 +32,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> getUserByUserName(String userName) {
         return this.userRepository.getUserByUserName(userName);
+    }
+
+    @Override
+    @Transactional
+    public void deleteUser(String userId) {
+        this.userRepository.deleteUser(userId);
     }
 }
