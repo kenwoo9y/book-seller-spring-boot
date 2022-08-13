@@ -13,4 +13,6 @@ public interface UserRepository {
     public void saveUser(User user);
 
     public Optional<User> getUserByUserName(String userName);
+
+    public void deleteUser(String userId);
 }

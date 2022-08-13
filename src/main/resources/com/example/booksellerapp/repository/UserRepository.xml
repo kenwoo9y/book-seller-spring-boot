@@ -31,5 +31,9 @@
         <result property="updatedTime" column="updated_time" />
         <result property="role" column="role" />
     </resultMap>
+
+    <delete id="deleteUser" parameterType="string">
+        delete from sample_sc.user where id = #{id}
+    </delete>
     
 </mapper>
