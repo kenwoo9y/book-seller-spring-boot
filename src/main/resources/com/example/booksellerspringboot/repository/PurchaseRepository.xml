@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.mybatissample.repository.PurchaseRepository">
-    <insert id="savePurchase" parameterType="com.example.booksellerapp.entity.Purchase">
+<mapper namespace="com.example.booksellerspringboot.repository.PurchaseRepository">
+    <insert id="savePurchase" parameterType="com.example.booksellerspringboot.entity.Purchase">
         insert into book_seller_sc.purchase values(
             #{id},
             #{userId},
@@ -16,7 +16,7 @@
         select * from book_seller_sc.purchase where user_id = #{userId}
     </select>
 
-    <resultMap id="purchaseDetails" type="com.example.booksellerapp.entity.Purchase">
+    <resultMap id="purchaseDetails" type="com.example.booksellerspringboot.entity.Purchase">
         <result property="id" column="id" />
         <result property="userId" column="user_id" />
         <result property="bookId" column="book_id" />
