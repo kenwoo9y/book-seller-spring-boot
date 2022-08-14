@@ -13,6 +13,7 @@ import com.example.booksellerspringboot.service.BookService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
@@ -34,7 +35,7 @@ public class BookController {
     }
 
     @DeleteMapping("/delete/{bookId}")
-    public ResponseEntity<?> deleteBookById(String bookId) {
+    public ResponseEntity<?> deleteBookById(@PathVariable("bookId") String bookId) {
         bookService.deleteBookById(bookId);
 
         return new ResponseEntity<>(HttpStatus.OK);
