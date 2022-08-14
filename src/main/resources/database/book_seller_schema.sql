@@ -25,4 +25,4 @@ create table book_seller_sc.purchase (
     book_id varchar(80),
     price decimal,
     purchase_time timestamp
-)
+);
