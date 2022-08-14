@@ -11,6 +11,7 @@ import com.example.booksellerspringboot.service.UserService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -29,12 +30,12 @@ public class UserController {
     }
 
     @GetMapping("/{userName}")
-    public ResponseEntity<?> getUserByUserName(String userName) {
+    public ResponseEntity<?> getUserByUserName(@PathVariable("userName") String userName) {
         return new ResponseEntity<>(userService.getUserByUserName(userName), HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{userId}")
-    public ResponseEntity<?> deleteUser(String userId) {
+    public ResponseEntity<?> deleteUser(@PathVariable("userId") String userId) {
         userService.deleteUser(userId);
 
         return new ResponseEntity<>(HttpStatus.OK);
