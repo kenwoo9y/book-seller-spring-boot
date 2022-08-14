@@ -28,7 +28,7 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/{userName}")
     public ResponseEntity<?> getUserByUserName(String userName) {
         return new ResponseEntity<>(userService.getUserByUserName(userName), HttpStatus.OK);
     }
