@@ -33,7 +33,7 @@
     </resultMap>
 
     <delete id="deleteUser" parameterType="string">
-        delete from sample_sc.user where id = #{id}
+        delete from book_seller_sc.user where id = #{id}
     </delete>
     
 </mapper>
