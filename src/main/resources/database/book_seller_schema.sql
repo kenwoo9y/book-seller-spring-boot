@@ -1,5 +1,5 @@
 create table book_seller_sc.user (
-    id varchar(80) not null primary key,
+    id serial not null primary key,
     user_name varchar (80),
     password varchar(80),
     email varchar(80),
@@ -11,7 +11,7 @@ create table book_seller_sc.user (
 );
 
 create table book_seller_sc.book (
-    id varchar(80) not null primary key,
+    id serial not null primary key,
     name varchar(80),
     description varchar(255),
     price decimal,
@@ -20,7 +20,7 @@ create table book_seller_sc.book (
 );
 
 create table book_seller_sc.purchase (
-    id varchar(80) not null primary key,
+    id serial not null primary key,
     user_id varchar(80),
     book_id varchar(80),
     price decimal,
