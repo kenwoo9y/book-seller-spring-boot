@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Purchase {
-    private String id;
+    private Long id;
     private String userId;
     private String bookId;
     private Double price;
