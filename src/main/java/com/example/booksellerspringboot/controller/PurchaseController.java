@@ -13,7 +13,7 @@ import com.example.booksellerspringboot.service.PurchaseService;
 
 @RestController
 @RequestMapping("/api/purchase")
-public class PurchaceController {
+public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
 
