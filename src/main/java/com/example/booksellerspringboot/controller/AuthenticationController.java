@@ -26,6 +26,7 @@ public class AuthenticationController {
         if (userService.getUserByUserName(user.getUserName()).isPresent()) {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
+        userService.saveUser(user);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
