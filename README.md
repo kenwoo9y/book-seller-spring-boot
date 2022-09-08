@@ -30,7 +30,18 @@ Content-Type: application/json
 ```
 
 ### User
+#### Get by UserName
+#### Delete
 
 ### Book
+#### Save
+
+#### Get All
+```
+GET /api/book HTTP/1.1
+Host: localhost:8080
+```
+#### Delete
 
 ### Purchase
+#### Save
