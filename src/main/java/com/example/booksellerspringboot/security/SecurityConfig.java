@@ -17,6 +17,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.example.booksellerspringboot.entity.Role;
+import com.example.booksellerspringboot.security.jwt.JwtAuthorizationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -40,6 +41,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/api/book").permitAll()
                 .antMatchers("/api/book/**").hasRole(Role.ADMIN.name())
                 .anyRequest().authenticated();
+    }
+
+    @Bean
+    public JwtAuthorizationFilter jwtAuthorizationFilter() {
+        return new JwtAuthorizationFilter();
     }
 
     @Override
